@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recall-engine"
+version = "2.0.0"
+description = "Memory-enhanced intent routing engine for AI Agents"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "RecallEngine Contributors"}]
+keywords = ["agent", "memory", "intent", "routing", "llm"]
+dependencies = [
+    "jieba>=0.42.1",
+    "scikit-learn>=1.0.0",
+]
+
+[project.optional-dependencies]
+demo = ["streamlit>=1.28.0"]
+dev = ["pytest>=7.0.0", "pytest-cov>=4.0.0", "black>=23.0.0", "flake8>=6.0.0"]
+all = ["recall-engine[demo,dev]"]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/recall-engine"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["recall_engine*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
