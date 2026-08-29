@@ -22,7 +22,7 @@ dev = ["pytest>=7.0.0", "pytest-cov>=4.0.0", "black>=23.0.0", "flake8>=6.0.0"]
 all = ["recall-engine[demo,dev]"]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/recall-engine"
+Homepage = "https://github.com/ToskaZhang/RecallEngine"
 
 [tool.setuptools.packages.find]
 where = ["."]

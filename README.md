@@ -99,7 +99,7 @@ pip install recall-engine[dev]	安装开发依赖（pytest、black、flake8）
 pip install recall-engine[all]	安装全部可选依赖
 3. 从源码安装（开发者）
 bash
-git clone https://github.com/yourusername/recall-engine.git
+git clone https://github.com/ToskaZhang/RecallEngine.git
 cd recall-engine
 pip install -e .
 4. 验证安装
