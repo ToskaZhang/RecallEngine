@@ -1,4 +1,5 @@
 """RecallEngine Interfaces — 抽象接口定义"""
+
 from abc import ABC, abstractmethod
 from typing import List, Dict, Optional, Any
 
@@ -7,7 +8,9 @@ class BaseMemoryStore(ABC):
     """记忆存储抽象接口"""
 
     @abstractmethod
-    def search(self, query: str, top_k: int, session_id: Optional[str] = None) -> List[Dict]:
+    def search(
+        self, query: str, top_k: int, session_id: Optional[str] = None
+    ) -> List[Dict]:
         """检索与 query 相关的记忆条目，返回含 text 和 score 的列表"""
         pass
 
@@ -17,7 +20,9 @@ class BaseMemoryStore(ABC):
         pass
 
     @abstractmethod
-    def fetch_context(self, query: str, max_tokens: int, session_id: Optional[str] = None) -> str:
+    def fetch_context(
+        self, query: str, max_tokens: int, session_id: Optional[str] = None
+    ) -> str:
         """获取格式化的上下文文本"""
         pass
 
